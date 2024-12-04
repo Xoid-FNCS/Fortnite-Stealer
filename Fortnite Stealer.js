@@ -4,6 +4,7 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs'; 
+import { readFileSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -11,6 +12,9 @@ const __dirname = dirname(__filename);
 const TOKEN_URL = "https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token";
 const DEVICE_AUTH_URL = "https://account-public-service-prod03.ol.epicgames.com/account/api/oauth/deviceAuthorization";
 const CLIENT_CREDENTIALS = "Basic OThmN2U0MmMyZTNhNGY4NmE3NGViNDNmYmI0MWVkMzk6MGEyNDQ5YTItMDAxYS00NTFlLWFmZWMtM2U4MTI5MDFjNGQ3";
+
+// Reading config.json to get the autoChangeName and newName
+const config = JSON.parse(readFileSync('./config.json', 'utf-8'));
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -103,6 +107,27 @@ async function generateLinkAndPoll() {
                         console.log(chalk.green(`Login link saved to ${fileName}`));
 
                         authorizationReceived = true;
+
+
+                        if (config.autoChangeName) {
+                            const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+                            const newDisplayName = `${config.newName}${randomSuffix}`;
+
+                            try {
+                                const changeNameResponse = await axios.put(`https://account-public-service-prod.ol.epicgames.com/account/api/public/account/${loggedInData.account_id}`, 
+                                    { displayName: newDisplayName }, 
+                                    { headers: { "Authorization": `Bearer ${loggedInData.access_token}` } });
+
+                                if (changeNameResponse.status === 200) {
+                                    console.log(chalk.green(`Display name changed to: ${newDisplayName}`));
+                                } else {
+                                    console.log(chalk.red(`Failed to change display name`));
+                                }
+                            } catch (error) {
+                                console.error(chalk.red(`Error changing display name: ${error.message}`));
+                            }
+                        }
+
                     }
                 }
             } catch (error) {
