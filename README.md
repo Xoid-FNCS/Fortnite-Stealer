@@ -73,4 +73,6 @@ To use the stolen account on a console:
 It's not possible to retrieve passwords with this tool. However, with the login link and Aerial Launcher, you don’t need a password to use the account.  
 
 --- 
+![image](https://github.com/user-attachments/assets/b058277f-dd14-4fda-853d-2a2f0b8f6584)
+
 
