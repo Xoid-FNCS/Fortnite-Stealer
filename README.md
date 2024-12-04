@@ -54,14 +54,20 @@ To launch Fortnite using the victim's account:
 To use the stolen account on a console:  
 
 1. Link the account to a new Xbox or PlayStation account on the **Apps and Accounts** page at [epicgames.com](https://epicgames.com).  
-2. Launch Fortnite on your console using the new account and enjoy!  
+2. Launch Fortnite on your console using the new account and enjoy!
+
+### **Automatically Change Name**
+
+To auto change their username:
+
+1. Go to the "config.json" file and replace "false" with "true"
+2. Then put the new name you want it to auto change into for the value of "newName"
 
 ---
 
 ### **Future Features**  
 
 - **Config File Options**  
-  - Auto Name Changer: Automatically changes the account's display name if available.  
   - Auto Nuke Friends List: Clears the friends list automatically.  
 
 - **Account Info Display**  
