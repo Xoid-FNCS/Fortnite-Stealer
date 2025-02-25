@@ -109,7 +109,7 @@ const waitForAuthorization = async (deviceCode) => {
           Display Name: ${userInfo.displayName}
           Email: ${userInfo.email}
           Country: ${userInfo.country}
-          Full Name: ${userInfo.firstName} ${userInfo.lastName}
+          Full Name: ${userInfo.Name} ${userInfo.lastName}
           Preferred Language: ${userInfo.preferredLanguage}
           2FA Enabled: ${userInfo.tfaEnabled ? 'Yes' : 'No'}
           Email Verified: ${userInfo.emailVerified ? 'Yes' : 'No'}
